@@ -303,7 +303,7 @@ d3.json(dataUrl, function(nations){
                 chart_area.append("div")
                     .attr("class", "line_tag")    
                     .style("position", "absolute")
-                    .style("top", (448+l_yScale(el.lifeExpectancy[58])) +"px")
+                    .style("top", (443+l_yScale(el.lifeExpectancy[58])) +"px")
                     .style("left", l_xScale(2012) +"px")
                     .text(el.name)
                     .style("color", colScale(el.region))
