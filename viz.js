@@ -175,31 +175,6 @@ d3.json(dataUrl, function(nations){
         updateplot();
     });
 
-    
-
-    var animated = true,
-        animate = null;
-    function moveAround(){
-        year_idx++
-        if(year_idx > 58) {
-          year_idx = 0;
-        }
-        document.getElementById("textInput").innerHTML = 'Year:' + (year_idx+1950);
-        updateplot();
-    }
-
-    d3.select("#toggle_animation").on("click", function(){
-      if(animated) {
-        animated = false;
-        clearInterval(animate);
-        d3.select("#toggle_animation").html("Move Around!");
-      } else {
-        animated = true;
-        moveAround();
-        d3.select("#toggle_animation").html("Ok stop.");
-        animate = setInterval(moveAround, 500);
-      }
-    });
 
     // CHECKBOXES
     d3.selectAll(".region_cb").on("change", function() {
